@@ -1,4 +1,6 @@
 async function register() {
+  const nama = document.getElementById("register-name").value;
+
   const email = document.getElementById("register-email").value;
 
   const password = document.getElementById("register-password").value;
@@ -11,6 +13,25 @@ async function register() {
   if (error) {
     alert(error.message);
     return;
+  }
+
+  const user = data.user;
+
+  if (user) {
+    const { error: profileError } = await supabaseClient
+      .from("profiles")
+      .insert([
+        {
+          id: user.id,
+          nama: nama,
+          email: email,
+          role: "siswa",
+        },
+      ]);
+
+    if (profileError) {
+      console.log(profileError);
+    }
   }
 
   alert("Register berhasil!");
