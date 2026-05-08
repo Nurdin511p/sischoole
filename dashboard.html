@@ -10,25 +10,36 @@
   </head>
 
   <body class="bg-gray-100">
-    <div class="p-10">
-      <h1 class="text-3xl font-bold">Dashboard LMS</h1>
+    <body class="bg-gray-100">
 
-      <h2 class="text-xl mt-4">
+    <div class="p-10">
+
+        <h1 class="text-3xl font-bold">
+        Dashboard LMS
+        </h1>
+
+        <h2 class="text-xl mt-4">
         Selamat datang,
         <span id="user-name"></span>
-      </h2>
+        </h2>
 
-      <p class="mt-2">
+        <p class="mt-2">
         Role:
         <span id="user-role"></span>
-      </p>
+        </p>
 
-      <button
+        <div
+        id="role-menu"
+        class="mt-6"
+        ></div>
+
+        <button
         onclick="logout()"
         class="mt-6 bg-red-600 text-white px-4 py-2 rounded"
-      >
+        >
         Logout
-      </button>
+        </button>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
