@@ -1,10 +1,7 @@
 async function register() {
   const nama = document.getElementById("register-name").value;
-
   const email = document.getElementById("register-email").value;
-
   const password = document.getElementById("register-password").value;
-
   const { data, error } = await supabaseClient.auth.signUp({
     email,
     password,
@@ -31,11 +28,10 @@ async function register() {
 
     if (profileError) {
       console.log(profileError);
+      alert(profileError.message);
     }
   }
-
   alert("Register berhasil!");
-
   window.location.href = "login.html";
 }
 
