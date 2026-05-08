@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Dashboard</title>
+    <title>Dashboard LMS</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -13,7 +13,23 @@
     <div class="p-10">
       <h1 class="text-3xl font-bold">Dashboard LMS</h1>
 
-      <p class="mt-4">Login berhasil.</p>
+      <p class="mt-4">User berhasil login.</p>
+
+      <button
+        onclick="logout()"
+        class="mt-6 bg-red-600 text-white px-4 py-2 rounded"
+      >
+        Logout
+      </button>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/session.js"></script>
+
+    <script>
+      checkSession();
+    </script>
   </body>
 </html>
