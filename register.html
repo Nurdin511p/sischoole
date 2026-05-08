@@ -4,39 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Login LMS</title>
+    <title>Register LMS</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded shadow w-full max-w-md">
-      <h1 class="text-2xl font-bold mb-6 text-center">Login LMS</h1>
+      <h1 class="text-2xl font-bold mb-6 text-center">Register LMS</h1>
 
       <input
         type="email"
-        id="login-email"
+        id="register-email"
         placeholder="Email"
         class="w-full border p-3 rounded mb-4"
       />
 
       <input
         type="password"
-        id="login-password"
+        id="register-password"
         placeholder="Password"
         class="w-full border p-3 rounded mb-4"
       />
 
       <button
-        onclick="login()"
-        class="w-full bg-green-600 text-white p-3 rounded"
+        onclick="register()"
+        class="w-full bg-blue-600 text-white p-3 rounded"
       >
-        Login
+        Register
       </button>
 
       <p class="mt-4 text-center">
-        Belum punya akun?
-        <a href="register.html" class="text-blue-600"> Register </a>
+        Sudah punya akun?
+        <a href="login.html" class="text-blue-600"> Login </a>
       </p>
     </div>
 
